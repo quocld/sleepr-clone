@@ -5,14 +5,14 @@ steps:
       [
         'build',
         '-t',
-        'https://us-east4-docker.pkg.dev/sleeprclone-413406/reservations/production',
+        'https://console.cloud.google.com/artifacts/docker/sleeprclone-413406/us-east4/reservations/production',
         '-f',
         'apps/reservations/Dockerfile',
         '.',
       ]
   - name: 'gcr.io/cloud-builders/docker'
     args:
-      ['push', 'https://us-east4-docker.pkg.dev/sleeprclone-413406/reservations/production']
+      ['push', 'https://console.cloud.google.com/artifacts/docker/sleeprclone-413406/us-east4/reservations/production']
 
   # Auth
   - name: 'gcr.io/cloud-builders/docker'
@@ -20,13 +20,13 @@ steps:
       [
         'build',
         '-t',
-        'https://us-east4-docker.pkg.dev/sleeprclone-413406/auth/production',
+        'https://console.cloud.google.com/artifacts/docker/sleeprclone-413406/us-east4/auth/production',
         '-f',
         'apps/auth/Dockerfile',
         '.',
       ]
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'https://us-east4-docker.pkg.dev/sleeprclone-413406/auth/production']
+    args: ['push', 'https://console.cloud.google.com/artifacts/docker/sleeprclone-413406/us-east4/auth/production']
 
   # Notifications
   - name: 'gcr.io/cloud-builders/docker'
@@ -34,14 +34,14 @@ steps:
       [
         'build',
         '-t',
-        'https://us-east4-docker.pkg.dev/sleeprclone-413406/notifications/production',
+        'https://console.cloud.google.com/artifacts/docker/sleeprclone-413406/us-east4/notifications/production',
         '-f',
         'apps/notifications/Dockerfile',
         '.',
       ]
   - name: 'gcr.io/cloud-builders/docker'
     args:
-      ['push', 'https://us-east4-docker.pkg.dev/sleeprclone-413406/notifications/production']
+      ['push', 'https://console.cloud.google.com/artifacts/docker/sleeprclone-413406/us-east4/notifications/production']
 
   # Payments
   - name: 'gcr.io/cloud-builders/docker'
@@ -49,10 +49,10 @@ steps:
       [
         'build',
         '-t',
-        'https://us-east4-docker.pkg.dev/sleeprclone-413406/payments/production',
+        'https://console.cloud.google.com/artifacts/docker/sleeprclone-413406/us-east4/payments/production',
         '-f',
         'apps/payments/Dockerfile',
         '.',
       ]
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'https://us-east4-docker.pkg.dev/sleeprclone-413406/payments/production']
+    args: ['push', 'https://console.cloud.google.com/artifacts/docker/sleeprclone-413406/us-east4/payments/production']
